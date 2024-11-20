@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unemployment rate study</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <h1> Student Academic Success & Dropout Rates </h1>
+
+    <h3>Overall Introduction</h3>
+
+    <p>Student academic success and dropout rates are critical topics in education research, reflecting
+        the overall effectiveness of educational systems and the well-being of students. Academic
+        success, often measured by grades, graduation rates, or skill acquisition, has a profound impact
+        on a student's future opportunities, career prospects, and socioeconomic mobility. On the other
+        hand, dropout rates serve as an indicator of systemic issues, such as access to resources,
+        student engagement, or the quality of support services. Understanding the factors influencing
+        both academic success and dropout rates is essential not only for improving educational
+        practices but also for shaping policies that foster equitable learning environments. Investigating
+        these topics can offer insights into how schools, teachers, and policymakers can reduce dropout
+        rates, thereby ensuring that more students achieve their full academic potential and contribute
+        meaningfully to society</p>
+
+    <p>To learn more about the academic success and dropout rates,
+         you can read this research paper on <a href="https://educationaltechnologyjournal.springeropen.com/articles/10.1186/s41239-020-0177-7">predicting academic success in higher education</a> or check out 
+         a paper from a reputable research organization like 
+         <a href="https://www.researchgate.net/publication/340406248_STUDENTS'_ACADEMIC_PERFORMANCE_AND_DROPOUT_PREDICTION">Research Gate</a>.</p>
+
+    <h3>Data Introduction</h3>
+
+    <p>  The <a href="https://www.kaggle.com/datasets/syedfaizanalii/predict-students-dropout-and-academic-success?resource=download">dataset</a> used in this analysis focuses on various demographic, academic, and socio-economic factors 
+        related to students at the time of their enrollment. The Predict Students Dropout and 
+        Academic Success dataset aims to predict student dropout rates and academic success. With a shape of 4,424
+        rows and 23 columns, this cleaned dataset provides a focused and comprehensive view of the student population under study.
+    </p>  
+
+    <p>
+        Key features in the dataset include CHANGE TO ONLY THE COLUMNS PEOPLE USED:
+        <!-- Change depending on what everyone wrote: Unknown -->
+    </p>
+    <ul>
+        <li>
+            <strong>Marital status, application mode, and course of enrollment:</strong> These variables provide insights into students' personal lives and academic choices, offering a better understanding of their trajectories.
+        </li>
+        <li>
+            <strong>Previous qualifications and time of attendance (daytime or evening):</strong> These factors highlight students' academic history and engagement levels with their program.
+        </li>
+        <li>
+            <strong>Parents’ academic background:</strong> This includes the highest educational qualifications of the mother and father, as well as their occupations. These socio-economic indicators can significantly influence a student’s academic success.
+        </li>
+    </ul>
+
+            <div class = 'center'>
+            <!-- Graph 1 Name : Unknown -->
+            <h3>Graph 1 Name</h3>
+            <!-- Graph 1 : Unknown -->
+                <iframe src="map.html" width="80%" height="400px" frameborder="0"></iframe>
+            </div>
+            <!-- Explanation 1 : Unknown -->
+            <p>In general, west coast states tend to have higher 
+                unemployment rate. On the east coast, West virginia 
+                and New York state tend to have higher unemplyment rate
+                than the others. In the south, Mississippi and Louisiana
+                are the ones with the much higher unemplyment rate.
+            </p>
+        <!-- Graph 2, change title, src, text -->
+        <h3>Graph 2 Title</h3>
+        
+        <div class = 'container'>
+            <div class = 'image'>
+                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
+                <iframe src="histogram/finish.png" width="100%" height="400px" frameborder="0"></iframe>
+            </div>
+            <div class = 'text'>
+                <p> First, we present an overview of the unemployment rate
+                    for all 50 states. Alaska is the one with the 
+                    highest unemployment rate, which may due to the seasonal 
+                    business in the state. The effectiveness of labor market 
+                    policies and governance structures can influence unemployment 
+                    rates. Washington, D.C., being the seat of government, may 
+                    experience fluctuations in employment related to government 
+                    spending and policies. Mississippi and Louisiana have economies 
+                    that are heavily reliant on sectors such as agriculture, 
+                    manufacturing, and energy. Economic downturns or fluctuations 
+                    in these industries can impact employment opportunities. 
+                    Connecticut, South Dakota and Virginia have the lowest 
+                    unemplyment rate. These states often have diverse economies 
+                    with strong sectors such as technology, healthcare, finance, 
+                    and tourism. A diverse economy can provide more resilience to 
+                    economic downturns.
+                </p>
+            </div>            
+        </div>
+        <!-- Graph 3, change title (h3), src, text (/p) -->
+        <h3> Graph 3 Title</h3>
+
+        <div class = 'container'>
+            <div class = 'text'>
+                <p>Moreover, we also want to examine the relationship between
+                    unemployment rate and other social factors in the data. All 
+                    features are numerical thus we firts create a correlation
+                    plot to examine whether there are linear relationship between 
+                    unemployment rate with other social factors. Notice that if 
+                    the correlation is small, it only means that there is no potential
+                    linear relationship between two features. 
+                </p>
+                <p>
+                    Based on the correlation plot, among all the features, poverty 
+                    has the strongest correlation with the unemployment rate since
+                    they are both related to the economics. The percentage of single 
+                    parents is the second important feature which inidicates the 
+                    stability of family is also strongly related to the job market. 
+                    The increase of unemployment rate may also related to the increase 
+                    of violent crime and murder rate but has a negative relationship
+                    with education indicators, like the percentage of people who go to
+                    high school and college. The only variable that has no direct linear
+                    relation with the unemployment rate is Metropolitan, which means the 
+                    percent of residents living in a metropolitan area. 
+                </p>
+            </div>
+            <div class = 'image'>
+                <img src="correlation_plot.png" width="100%" height="500px" frameborder="0"></img>
+            </div>   
+        </div>
+        <!-- Graph 4, change title (h3), src, text (/p) -->
+        <p>We have also create an interactive scatter plot so that 
+            our users can select a couple of states within
+            a certain range of unemployment rate and to see how the 
+            other factors may be related here. 
+        </p>
+
+        <div class = 'center'>
+            <iframe src="scatter.html" width="85%" height="550px" frameborder="0"></iframe>
+        </div>
+        
+        <!-- Graph 5, change title (h3), src, text (/p) -->
+        <h3>Graph 5</h3>
+
+        <p>
+            Since we are in MA, thus we want to take a closer look between
+            MA and other states. We create the following interactive plot
+            such that user can choose another state to compare with MA and 
+            show the bar plot on each factors. 
+        </p>
+
+        <div class = 'center'>
+            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
+        </div>
+
+        <div class = 'center'>
+            <iframe src="scatter.html" width="85%" height="550px" frameborder="0"></iframe>
+        </div>
+        
+        <!-- Graph 6, change title (h3), src, text (/p) -->
+        <h3>Graph 6</h3>
+
+        <p>
+            Since we are in MA, thus we want to take a closer look between
+            MA and other states. We create the following interactive plot
+            such that user can choose another state to compare with MA and 
+            show the bar plot on each factors. 
+        </p>
+
+        <div class = 'center'>
+            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
+        </div>
+
+        <h3>Summary and additional work</h3>
+
+        <p>
+            In this visualization analysis, we try to explore the US 
+            unemployment rate across states. We also examine the relation
+            between unemployment rate and other social factors. 
+        </p>
+        <p>
+            Unfortunately, this is the 2010 data thus may be different 
+            than the current economics status. Also, unemployment rate 
+            may fluctuate seasonally thus adding a time series analysis
+            will be more informative. 
+        </p>
+
+        <p>If you are interested in the project and want to share more
+            opinions or resource about the project, please contact:
+            Xiaoyi Yang (xiaoy.yang@northeastern.edu)
+        </p>
+
+</body>
+</html>
