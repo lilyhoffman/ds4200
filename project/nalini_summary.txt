@@ -1,0 +1,8 @@
+The visualization highlights the relationship between age at enrollment and unemployment rate, 
+with marital status represented through distinct line colors. By focusing on the full age range 
+and grouping data by marital status, we observe that single individuals and married individuals
+exhibit different trends. Single individuals tend to have slightly higher variability in unemployment
+rates across the age spectrum, while married individuals show steadier trends. The data points and
+gridlines improve the graph's readability, and the tooltip provides interactive insights for
+specific data points. This visualization underscores how age, unemployment, and marital 
+status interplay, offering a clearer understanding of how these factors relate.
