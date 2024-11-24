@@ -1,0 +1,13 @@
+The interactive scatter plot provides insights into the relationships between age at enrollment, outcomes, and scholarship status, while also allowing for dynamic exploration by marital status. Key takeaways include:
+
+Age and Outcomes: Patterns or clusters in the distribution of outcomes (e.g., dropout, enrolled, graduate) across different age groups can reveal how age at enrollment influences success rates. For instance, younger or older students might be more likely to drop out or graduate.
+
+Scholarship Impact: The color distinction for scholarship holders helps identify whether financial support correlates with better outcomes. For example, clusters of scholarship holders near "graduate" outcomes may suggest a positive influence.
+
+Marital Status as a Contextual Factor: The animation frame adds marital status as a dimension, allowing you to assess how marital status interacts with age, scholarships, and outcomes. Differences across frames may highlight unique trends, such as married students being more likely to graduate or drop out depending on age.
+
+Some of the interesting takeways include a high shows a higher dropout rate than graduation rate for students with scholarship, especially for divorced status students between the ages of 30 and 40.
+
+The range of enrollement age is also much greater for students single or married than any other relationship status
+
+Overall, the graph enables a nuanced understanding of how demographic and financial variables intersect with educational outcomes.
