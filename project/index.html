@@ -1,181 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unemployment rate study</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Unemployment Rate Study</title>
+    <link href="style1.css" rel="stylesheet" />
 </head>
+
 <body>
-    
-    <h1> Student Academic Success & Dropout Rates </h1>
+    <!-- Header Section -->
+    <h1>Student Academic Success & Dropout Rates</h1>
 
+    <!-- Introduction Section -->
     <h3>Overall Introduction</h3>
-
-    <p>Student academic success and dropout rates are critical topics in education research, reflecting
-        the overall effectiveness of educational systems and the well-being of students. Academic
-        success, often measured by grades, graduation rates, or skill acquisition, has a profound impact
-        on a student's future opportunities, career prospects, and socioeconomic mobility. On the other
-        hand, dropout rates serve as an indicator of systemic issues, such as access to resources,
-        student engagement, or the quality of support services. Understanding the factors influencing
-        both academic success and dropout rates is essential not only for improving educational
-        practices but also for shaping policies that foster equitable learning environments. Investigating
-        these topics can offer insights into how schools, teachers, and policymakers can reduce dropout
-        rates, thereby ensuring that more students achieve their full academic potential and contribute
-        meaningfully to society</p>
-
-    <p>To learn more about the academic success and dropout rates,
-         you can read this research paper on <a href="https://educationaltechnologyjournal.springeropen.com/articles/10.1186/s41239-020-0177-7">predicting academic success in higher education</a> or check out 
-         a paper from a reputable research organization like 
-         <a href="https://www.researchgate.net/publication/340406248_STUDENTS'_ACADEMIC_PERFORMANCE_AND_DROPOUT_PREDICTION">Research Gate</a>.</p>
-
-    <h3>Data Introduction</h3>
-
-    <p>  The <a href="https://www.kaggle.com/datasets/syedfaizanalii/predict-students-dropout-and-academic-success?resource=download">dataset</a> used in this analysis focuses on various demographic, academic, and socio-economic factors 
-        related to students at the time of their enrollment. The Predict Students Dropout and 
-        Academic Success dataset aims to predict student dropout rates and academic success. With a shape of 4,424
-        rows and 23 columns, this cleaned dataset provides a focused and comprehensive view of the student population under study.
-    </p>  
-
     <p>
-        Key features in the dataset include CHANGE TO ONLY THE COLUMNS PEOPLE USED:
-        <!-- Change depending on what everyone wrote: Unknown -->
+        Student academic success and dropout rates are critical topics in education research, reflecting
+        the overall effectiveness of educational systems and the well-being of students. Academic success,
+        often measured by grades, graduation rates, or skill acquisition, profoundly impacts future opportunities,
+        career prospects, and socioeconomic mobility. Dropout rates indicate systemic issues, such as resource
+        access, student engagement, or support quality. Understanding these factors is essential for
+        improving educational practices and fostering equitable learning environments.
     </p>
+    <p>
+        Learn more about academic success and dropout rates through these resources:
+        <a href="https://educationaltechnologyjournal.springeropen.com/articles/10.1186/s41239-020-0177-7">Research on predicting academic success</a> or a
+        <a href="https://www.researchgate.net/publication/340406248_STUDENTS'_ACADEMIC_PERFORMANCE_AND_DROPOUT_PREDICTION">paper on dropout prediction</a>.
+    </p>
+
+    <!-- Data Section -->
+    <h3>Data Introduction</h3>
+    <p>
+        The <a href="https://www.kaggle.com/datasets/syedfaizanalii/predict-students-dropout-and-academic-success?resource=download">dataset</a>
+        focuses on demographic, academic, and socioeconomic factors at enrollment, aiming to predict student dropout rates
+        and academic success. It includes 4,424 rows and 23 columns.
+    </p>
+    <p>Key features include:</p>
     <ul>
-        <li>
-            <strong>Marital status, application mode, and course of enrollment:</strong> These variables provide insights into students' personal lives and academic choices, offering a better understanding of their trajectories.
-        </li>
-        <li>
-            <strong>Previous qualifications and time of attendance (daytime or evening):</strong> These factors highlight students' academic history and engagement levels with their program.
-        </li>
-        <li>
-            <strong>Parents’ academic background:</strong> This includes the highest educational qualifications of the mother and father, as well as their occupations. These socio-economic indicators can significantly influence a student’s academic success.
-        </li>
+        <li><strong>Marital status, application mode, and course enrollment:</strong> Insights into personal lives and academic choices.</li>
+        <li><strong>Previous qualifications and attendance mode:</strong> Highlights academic history and engagement.</li>
+        <li><strong>Parents' academic background:</strong> Includes educational qualifications and occupations as socioeconomic indicators.</li>
     </ul>
 
-            <div class = 'center'>
-            <!-- Graph 1 Name : Nalini -->
-            <h3>Age at Enrollment & Unemployment Rate</h3>
-            <!-- Graph 1 : Nalini -->
-                <iframe src="nalini_data.html" width="80%" height="400px" frameborder="0"></iframe>
-            </div>
-            <!-- Explanation 1 : Unknown -->
-            <p>The visualization highlights the relationship between age at enrollment and unemployment rate, 
-                with marital status represented through distinct line colors. By focusing on the full age range 
-                and grouping data by marital status, we observe that single individuals and married individuals
-                exhibit different trends. Single individuals tend to have slightly higher variability in unemployment
-                rates across the age spectrum, while married individuals show steadier trends. The data points and
-                gridlines improve the graph's readability, and the tooltip provides interactive insights for
-                specific data points. This visualization underscores how age, unemployment, and marital 
-                status interplay, offering a clearer understanding of how these factors relate.
-            </p>
-        <!-- Graph 2, change title, src, text -->
-        <h3>Graph 2 Title</h3>
+    <!-- Graph 1 -->
+    <div class="center">
+        <h3>Age at Enrollment & Unemployment Rate</h3>
+        <iframe src="nalini_data.html" width="80%" height="400px" frameborder="0"></iframe>
+    </div>
+    <p>
+        This visualization highlights the relationship between age at enrollment and unemployment rate, with marital
+        status as a factor. Single individuals show more variability in unemployment rates, while married individuals
+        display steadier trends. Tooltips enhance interactivity, offering insights into how age, unemployment, and
+        marital status interplay.
+    </p>
+
+    <!-- Graph 2 -->
+    <h3>Student Age at Enrollment vs. Outcome</h3>
+    <div class="center">
+        <div class="graph">
+            <iframe src="scatter_plot.html" width="100%" height="400px" frameborder="0"></iframe>
+        </div>
+        <!-- Paragraph under the graph -->
+        <div class="text">
+            <p>The scatter plot explores age, outcomes, and scholarship status. Key insights:</p>
+            <ul>
+                <li><strong>Age and Outcomes:</strong> Patterns reveal how age influences success rates.</li>
+                <li><strong>Scholarship Impact:</strong> Highlights financial support's correlation with outcomes.</li>
+                <li><strong>Marital Status:</strong> Explores interactions between marital status, age, scholarships, and outcomes.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Model Performance -->
+    <div class="graphs-container">
+        <div class="graph">
+            <h3>Confusion Matrix</h3>
+            <iframe src="random_forest_confusion_matrix.html" width="100%" height="500px" frameborder="0"></iframe>
+        </div>
+        <div class="graph">
+            <h3>Feature Importance</h3>
+            <iframe src="random_forest_feature_importance.html" width="100%" height="500px" frameborder="0"></iframe>
+        </div>
+    </div>
+        <p class="graphs-description">
+            The plots provide meaningful insights into the underlying data based on the model's behavior and feature importance. The feature importance plot highlights which variables in the dataset are most strongly associated with the target outcome, indicating the factors likely driving the observed patterns. These rankings expose relationships within the data, such as which attributes contribute more to the variability in the target, helping identify key predictors. Additionally, the distribution of feature importance—whether concentrated on a few features or spread out—reveals whether the data relies heavily on certain predictors or is more evenly distributed.
         
-        <div class = 'container'>
-            <div class = 'image'>
-                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
-                <iframe src="histogram/finish.png" width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-            <div class = 'text'>
-                <p> First, we present an overview of the unemployment rate
-                    for all 50 states. Alaska is the one with the 
-                    highest unemployment rate, which may due to the seasonal 
-                    business in the state. The effectiveness of labor market 
-                    policies and governance structures can influence unemployment 
-                    rates. Washington, D.C., being the seat of government, may 
-                    experience fluctuations in employment related to government 
-                    spending and policies. Mississippi and Louisiana have economies 
-                    that are heavily reliant on sectors such as agriculture, 
-                    manufacturing, and energy. Economic downturns or fluctuations 
-                    in these industries can impact employment opportunities. 
-                    Connecticut, South Dakota and Virginia have the lowest 
-                    unemplyment rate. These states often have diverse economies 
-                    with strong sectors such as technology, healthcare, finance, 
-                    and tourism. A diverse economy can provide more resilience to 
-                    economic downturns.
-                </p>
-            </div>            
-        </div>
-        <!-- Graph 3, change title (h3), src, text (/p) -->
-        <h3> Graph 3 Title</h3>
-
-        <div class = 'container'>
-            <div class = 'text'>
-                <p>Moreover, we also want to examine the relationship between
-                    unemployment rate and other social factors in the data. All 
-                    features are numerical thus we firts create a correlation
-                    plot to examine whether there are linear relationship between 
-                    unemployment rate with other social factors. Notice that if 
-                    the correlation is small, it only means that there is no potential
-                    linear relationship between two features. 
-                </p>
-                <p>
-                    Based on the correlation plot, among all the features, poverty 
-                    has the strongest correlation with the unemployment rate since
-                    they are both related to the economics. The percentage of single 
-                    parents is the second important feature which inidicates the 
-                    stability of family is also strongly related to the job market. 
-                    The increase of unemployment rate may also related to the increase 
-                    of violent crime and murder rate but has a negative relationship
-                    with education indicators, like the percentage of people who go to
-                    high school and college. The only variable that has no direct linear
-                    relation with the unemployment rate is Metropolitan, which means the 
-                    percent of residents living in a metropolitan area. 
-                </p>
-            </div>
-            <div class = 'image'>
-                <img src="correlation_plot.png" width="100%" height="500px" frameborder="0"></img>
-            </div>   
-        </div>
-        <!-- Graph 4, change title (h3), src, text (/p) -->
-        <p>We have also create an interactive scatter plot so that 
-            our users can select a couple of states within
-            a certain range of unemployment rate and to see how the 
-            other factors may be related here. 
-        </p>
-
-        <div class = 'center'>
-            <iframe src="scatter.html" width="85%" height="550px" frameborder="0"></iframe>
-        </div>
+            In this case, the most influential features are "age at enrollment" and "course" due to their strong connection to predicting school participation. These features have the highest importance in predicting students' statuses as graduated, enrolled, or dropped out. Specifically, "age at enrollment" and "course" contribute 11% and 10% importance, respectively, while the remaining features average around 7% significance. This trend indicates a shallow decrease in prediction effect among other features.
         
-        <!-- Graph 5, change title (h3), src, text (/p) -->
-        <h3>Graph 5</h3>
-
-        <p>
-            Since we are in MA, thus we want to take a closer look between
-            MA and other states. We create the following interactive plot
-            such that user can choose another state to compare with MA and 
-            show the bar plot on each factors. 
-        </p>
-
-        <div class = 'center'>
-            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
-        </div>
-
-        <div class = 'center'>
-            <iframe src="scatter.html" width="85%" height="550px" frameborder="0"></iframe>
-        </div>
+            The confusion matrix provides additional insights by showing accuracy across different classes. It reflects whether the data has imbalanced classes or overlapping features that make some categories harder to distinguish. Consistently high misclassification rates for certain classes might suggest noisy or insufficient data, highlighting the need for further data collection or refinement.
         
-        <!-- Graph 6, change title (h3), src, text (/p) -->
-        <h3>Graph 6</h3>
-
-        <p>
-            Since we are in MA, thus we want to take a closer look between
-            MA and other states. We create the following interactive plot
-            such that user can choose another state to compare with MA and 
-            show the bar plot on each factors. 
+            In analyzing the confusion matrix and the results of the XGBoost model, our focus shifts from improving accuracy to gaining deeper insights into the data. The results show that predictions for "graduate" and "dropout" individuals are more consistent, suggesting clearer, more stable features for these categories compared to others.
         </p>
+        
 
-        <div class = 'center'>
-            <iframe src="summary.html" width="95%" height="300px" frameborder="0"></iframe>
-        </div>
+    <!-- Graph 5 -->
+    <h3>Graph 5</h3>
+    <p>
+        Graph 5 Paragraph
+    </p>
+    <div class="center">
+        <iframe src="nameofgraph.html" width="95%" height="300px" frameborder="0"></iframe>
+    </div>
 
-        <h3>Overview and Next Steps</h3>
-
-        <p>
-            EVENTUALLY WRITE UP GENERAL SUMMARY ABOUT OUR FINDINGS
-        </p>
-
+    <!-- Summary Section -->
+    <h3>Overview and Next Steps</h3>
+    <p>
+        EVENTUALLY WRITE UP GENERAL SUMMARY ABOUT OUR FINDINGS
+    </p>
 </body>
+
 </html>
