@@ -15,17 +15,20 @@
     <!-- Introduction Section -->
     <h3>Overall Introduction</h3>
     <p>
-        Student academic success and dropout rates are critical topics in education research, reflecting
-        the overall effectiveness of educational systems and the well-being of students. Academic success,
-        often measured by grades, graduation rates, or skill acquisition, profoundly impacts future opportunities,
-        career prospects, and socioeconomic mobility. Dropout rates indicate systemic issues, such as resource
-        access, student engagement, or support quality. Understanding these factors is essential for
-        improving educational practices and fostering equitable learning environments.
+        Student academic success and dropout rates are critical topics in education research, reflecting the overall effectiveness of educational systems and the well-being of students. Academic success, often measured by grades, graduation rates, or skill acquisition, has a profound impact on a student's future opportunities, career prospects, and socioeconomic mobility. On the other hand, dropout rates serve as an indicator of systemic issues, such as access to resources, student engagement, or the quality of support services. Understanding the factors influencing both academic success and dropout rates is essential not only for improving educational practices but also for shaping policies that foster equitable learning environments. Investigating these topics can offer insights into how schools, teachers, and policymakers can reduce dropout rates, thereby ensuring that more students achieve their full academic potential and contribute meaningfully to society.
     </p>
     <p>
         Learn more about academic success and dropout rates through these resources:
         <a href="https://educationaltechnologyjournal.springeropen.com/articles/10.1186/s41239-020-0177-7">Research on predicting academic success</a> or a
         <a href="https://www.researchgate.net/publication/340406248_STUDENTS'_ACADEMIC_PERFORMANCE_AND_DROPOUT_PREDICTION">paper on dropout prediction</a>.
+    </p>
+    <p>
+        Both of these studies systematically explore the factors influencing student success rates and propose methodologies to address this multifaceted issue. A key feature of their approach is the integration of machine learning (ML) techniques, which offer a more nuanced perspective on the analysis and interpretation of the data, ultimately enhancing the robustness of their conclusions. These papers provide valuable insights for a more in-depth examination of underlying trends in the data and serve as a foundation for comparing results derived from our visualizations.
+    </p>
+    <p>
+        Data pre-processing is a crucial step to ensure the dataset is clean and well-structured for analysis. This includes handling missing data by removing or imputing values to improve accuracy, normalizing numerical features for consistent scaling, and selecting relevant features by analyzing correlations to enhance data quality. These steps lay a solid foundation for meaningful and accurate insights.    </p>
+    <p>
+        The analysis involves descriptive statistics to summarize key metrics and explore correlations between student success factors and dropout rates. Predictive modeling using techniques like Logistic Regression will identify dropout risks and evaluate model performance. Additionally, cluster analysis will uncover patterns by grouping students based on similar academic behaviors, helping to pinpoint factors associated with success or risk.
     </p>
 
     <!-- Data Section -->
@@ -35,12 +38,109 @@
         focuses on demographic, academic, and socioeconomic factors at enrollment, aiming to predict student dropout rates
         and academic success. It includes 4,424 rows and 23 columns.
     </p>
-    <p>Key features include:</p>
-    <ul>
-        <li><strong>Marital status, application mode, and course enrollment:</strong> Insights into personal lives and academic choices.</li>
-        <li><strong>Previous qualifications and attendance mode:</strong> Highlights academic history and engagement.</li>
-        <li><strong>Parents' academic background:</strong> Includes educational qualifications and occupations as socioeconomic indicators.</li>
-    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Marital Status</td>
+                <td>The marital status of the student (e.g., single, married, divorced).</td>
+            </tr>
+            <tr>
+                <td>Application Mode</td>
+                <td>The type of application the student submitted to enroll in the course.</td>
+            </tr>
+            <tr>
+                <td>Application Order</td>
+                <td>The rank or priority of the course in the student's application process (e.g., first choice, second choice).</td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td>The degree program or field of study the student is enrolled in.</td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td>Indicates whether the student attends classes during the day or evening.</td>
+            </tr>
+            <tr>
+                <td>Previous Qualification</td>
+                <td>The academic credential the student held before enrolling (e.g., high school diploma, vocational training).</td>
+            </tr>
+            <tr>
+                <td>Nationality</td>
+                <td>The student's country of origin or citizenship.</td>
+            </tr>
+            <tr>
+                <td>Mother's Qualification</td>
+                <td>The highest level of education completed by the student's mother.</td>
+            </tr>
+            <tr>
+                <td>Father's Qualification</td>
+                <td>The highest level of education completed by the student's father.</td>
+            </tr>
+            <tr>
+                <td>Mother's Occupation</td>
+                <td>The current or most recent job or role held by the student's mother.</td>
+            </tr>
+            <tr>
+                <td>Father's Occupation</td>
+                <td>The current or most recent job or role held by the student's father.</td>
+            </tr>
+            <tr>
+                <td>Displaced</td>
+                <td>Indicates whether the student has been displaced from their usual place of residence (e.g., due to conflict or natural disasters).</td>
+            </tr>
+            <tr>
+                <td>Educational Special Needs</td>
+                <td>Specifies if the student requires additional support or accommodations for learning.</td>
+            </tr>
+            <tr>
+                <td>Debtor</td>
+                <td>Indicates whether the student has outstanding financial obligations.</td>
+            </tr>
+            <tr>
+                <td>Tuition Fees Up-to-Date</td>
+                <td>Reflects whether the student's tuition payments are current.</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>The student's self-identified gender.</td>
+            </tr>
+            <tr>
+                <td>Scholarship Holder</td>
+                <td>Denotes whether the student is receiving a scholarship.</td>
+            </tr>
+            <tr>
+                <td>Age at Enrollment</td>
+                <td>The student's age at the time of enrollment.</td>
+            </tr>
+            <tr>
+                <td>International</td>
+                <td>Specifies if the student is an international (non-domestic) student.</td>
+            </tr>
+            <tr>
+                <td>Unemployment Rate</td>
+                <td>The percentage of the population unemployed in the student's location.</td>
+            </tr>
+            <tr>
+                <td>Inflation Rate</td>
+                <td>The rate at which prices are increasing in the student's location.</td>
+            </tr>
+            <tr>
+                <td>GDP</td>
+                <td>The gross domestic product of the student’s country or region.</td>
+            </tr>
+            <tr>
+                <td>Output</td>
+                <td>The total production or academic outcome linked to the course or institution.</td>
+            </tr>
+        </tbody>
+    </table>
+    
 
     <!-- Graph 1 -->
     <div class="center">
@@ -48,10 +148,14 @@
         <iframe src="nalini_data.html" width="80%" height="400px" frameborder="0"></iframe>
     </div>
     <p>
-        This visualization highlights the relationship between age at enrollment and unemployment rate, with marital
-        status as a factor. Single individuals show more variability in unemployment rates, while married individuals
-        display steadier trends. Tooltips enhance interactivity, offering insights into how age, unemployment, and
-        marital status interplay.
+        The visualization highlights the relationship between age at enrollment and unemployment rate, 
+        with marital status represented through distinct line colors. By focusing on the full age range 
+        and grouping data by marital status, we observe that single individuals and married individuals
+        exhibit different trends. Single individuals tend to have slightly higher variability in unemployment
+        rates across the age spectrum, while married individuals show steadier trends. The data points and
+        gridlines improve the graph's readability, and the tooltip provides interactive insights for
+        specific data points. This visualization underscores how age, unemployment, and marital 
+        status interplay, offering a clearer understanding of how these factors relate.
     </p>
 
     <!-- Graph 2 -->
@@ -62,13 +166,31 @@
         </div>
         <!-- Paragraph under the graph -->
         <div class="text">
-            <p>The scatter plot explores age, outcomes, and scholarship status. Key insights:</p>
+            <p>
+                The interactive scatter plot provides insights into the relationships between age at enrollment, outcomes, and scholarship status, while also allowing for dynamic exploration by marital status. Key takeaways include:
+            </p>
             <ul>
-                <li><strong>Age and Outcomes:</strong> Patterns reveal how age influences success rates.</li>
-                <li><strong>Scholarship Impact:</strong> Highlights financial support's correlation with outcomes.</li>
-                <li><strong>Marital Status:</strong> Explores interactions between marital status, age, scholarships, and outcomes.</li>
+                <li>
+                    <strong>Age and Outcomes:</strong> Patterns or clusters in the distribution of outcomes (e.g., dropout, enrolled, graduate) across different age groups can reveal how age at enrollment influences success rates. For instance, younger or older students might be more likely to drop out or graduate.
+                </li>
+                <li>
+                    <strong>Scholarship Impact:</strong> The color distinction for scholarship holders helps identify whether financial support correlates with better outcomes. For example, clusters of scholarship holders near "graduate" outcomes may suggest a positive influence.
+                </li>
+                <li>
+                    <strong>Marital Status as a Contextual Factor:</strong> The animation frame adds marital status as a dimension, allowing you to assess how marital status interacts with age, scholarships, and outcomes. Differences across frames may highlight unique trends, such as married students being more likely to graduate or drop out depending on age.
+                </li>
             </ul>
+            <p>
+                Some of the interesting takeaways include a higher dropout rate than graduation rate for students with scholarships, especially for divorced-status students between the ages of 30 and 40.
+            </p>
+            <p>
+                The range of enrollment age is also much greater for students who are single or married than for any other relationship status.
+            </p>
+            <p>
+                Overall, the graph enables a nuanced understanding of how demographic and financial variables intersect with educational outcomes.
+            </p>
         </div>
+        
     </div>
 
 
@@ -114,8 +236,8 @@
     <!-- Summary Section -->
     <h3>Overview and Next Steps</h3>
     <p>
-        This project explores key factors behind student academic outcomes and dropout rates, aiming to uncover patterns that drive success or challenges in education. Using demographic, academic, and socioeconomic data, the analysis highlights influential predictors such as age and course enrollment, offering valuable insights for educational improvement. Future efforts will focus on addressing class imbalances and refining predictive features to deepen understanding and support data-driven strategies for fostering equitable and effective learning environments.
-    </p>
+        The analysis reveals significant patterns in student academic success and dropout rates, with key insights derived from data visualizations and predictive models. Visualizations highlight the influence of factors like age at enrollment, marital status, and scholarship status on academic outcomes, showing that younger and older students tend to exhibit distinct trends in dropout or graduation rates. Predictive modeling emphasizes the importance of features such as "age at enrollment" and "course" in determining outcomes, while the confusion matrix suggests that predicting dropout and graduation statuses is more reliable than other outcomes.
+        Future work can address imbalances in class distribution and refine feature selection to improve model performance and provide deeper insights. Additionally, expanding the dataset or integrating external factors, such as institutional policies or regional economic conditions, could enhance understanding and inform strategies to promote equitable and effective education systems.    </p>
 </body>
 
 </html>
