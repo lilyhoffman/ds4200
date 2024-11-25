@@ -73,6 +73,7 @@
 
 
     <!-- Model Performance -->
+    <h2>Model Predictions</h2>
     <div class="graphs-container">
         <div class="graph">
             <h3>Confusion Matrix</h3>
@@ -83,19 +84,26 @@
             <iframe src="random_forest_feature_importance.html" width="100%" height="500px" frameborder="0"></iframe>
         </div>
     </div>
-        <p class="graphs-description">
-            The plots provide meaningful insights into the underlying data based on the model's behavior and feature importance. The feature importance plot highlights which variables in the dataset are most strongly associated with the target outcome, indicating the factors likely driving the observed patterns. These rankings expose relationships within the data, such as which attributes contribute more to the variability in the target, helping identify key predictors. Additionally, the distribution of feature importance—whether concentrated on a few features or spread out—reveals whether the data relies heavily on certain predictors or is more evenly distributed.
-        
-            In this case, the most influential features are "age at enrollment" and "course" due to their strong connection to predicting school participation. These features have the highest importance in predicting students' statuses as graduated, enrolled, or dropped out. Specifically, "age at enrollment" and "course" contribute 11% and 10% importance, respectively, while the remaining features average around 7% significance. This trend indicates a shallow decrease in prediction effect among other features.
-        
-            The confusion matrix provides additional insights by showing accuracy across different classes. It reflects whether the data has imbalanced classes or overlapping features that make some categories harder to distinguish. Consistently high misclassification rates for certain classes might suggest noisy or insufficient data, highlighting the need for further data collection or refinement.
-        
-            In analyzing the confusion matrix and the results of the XGBoost model, our focus shifts from improving accuracy to gaining deeper insights into the data. The results show that predictions for "graduate" and "dropout" individuals are more consistent, suggesting clearer, more stable features for these categories compared to others.
-        </p>
+    <h4>Model Insights</h4>
+    <p>The plots provide meaningful insights into the underlying data based on the model's behavior and feature importance. The feature importance plot reveals which variables in the dataset are most strongly associated with the target outcome, indicating which factors are likely driving the observed patterns in the data. The importance rankings can also expose relationships within the data, such as which attributes contribute more to the variability in the target, helping to identify key predictors. Additionally, the distribution of feature importance, whether it's concentrated on a few features or spread out, tells us whether the data relies heavily on certain predictors or is more evenly distributed.</p>
+    <p>In this case, the most influential features are <strong>"age at enrollment"</strong> and <strong>"course"</strong> due to the strong connection they have to predicting the participation in school, and therefore are the highest importance in predicting the students' status of graduated, enrolled, or dropout. Besides showing which features are the most influential in the random feature model, the feature importance also shows us that there tends to be a shallow decrease in prediction effect on the rest of the statistical data with "age at enrollment" and "course" at 11% and 10% with the other features averaging at ~7% significance.</p>
+    <p>From the confusion matrix, the accuracy across different classes can reflect whether the data has imbalanced classes or overlapping features that make some categories harder to distinguish. If certain classes consistently show high misclassification rates, it might suggest noisy or insufficient data in those areas, indicating a need for further data collection or refinement.</p>
+    <p>As we analyze the confusion matrix and the results of the XGBoost model, our focus isn't on improving accuracy; it is learning as much as possible about the data. From the confusion matrix and results, we can see that the prediction results of graduate and dropout individuals are much easier to predict, allowing us to assume more consistent features.
+
+    </p>
         
 
-    <!-- Graph 5 -->
-    <h3>Graph 5</h3>
+    <!-- Sankey -->
+    <h3>Sankey GRAPH 5</h3>
+    <p>
+        Graph 5 Paragraph
+    </p>
+    <div class="center">
+        <iframe src="nameofgraph.html" width="95%" height="300px" frameborder="0"></iframe>
+    </div>
+
+    <!-- Nalini -->
+    <h3>NALINI Graph 5</h3>
     <p>
         Graph 5 Paragraph
     </p>
@@ -106,7 +114,7 @@
     <!-- Summary Section -->
     <h3>Overview and Next Steps</h3>
     <p>
-        EVENTUALLY WRITE UP GENERAL SUMMARY ABOUT OUR FINDINGS
+        This project explores key factors behind student academic outcomes and dropout rates, aiming to uncover patterns that drive success or challenges in education. Using demographic, academic, and socioeconomic data, the analysis highlights influential predictors such as age and course enrollment, offering valuable insights for educational improvement. Future efforts will focus on addressing class imbalances and refining predictive features to deepen understanding and support data-driven strategies for fostering equitable and effective learning environments.
     </p>
 </body>
 
