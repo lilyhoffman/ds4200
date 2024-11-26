@@ -6,3 +6,7 @@ rates across the age spectrum, while married individuals show steadier trends. T
 gridlines improve the graph's readability, and the tooltip provides interactive insights for
 specific data points. This visualization underscores how age, unemployment, and marital 
 status interplay, offering a clearer understanding of how these factors relate.
+
+Marriage plot:
+
+The bar chart illustrates the number of students categorized by marital status and outcome. Each bar represents a marital status group, color-coded by outcome, allowing for a comparative view. The interactive legend enables users to highlight specific outcomes, adjusting the bar opacity to emphasize selected categories. The visualization reveals variations in student distribution across marital statuses and outcomes, offering insights into trends, such as which marital status groups have higher or lower counts for particular outcomes. This interactive feature enhances the analysis by allowing focused exploration of individual outcomes.
