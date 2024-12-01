@@ -3,39 +3,30 @@
 <style>
     .line {
         fill: none;
-        stroke-width: 3px;
+        stroke-width: 2px;
     }
     .dot {
-        fill: steelblue;
-    }
-    .grid line {
-        stroke: #e0e0e0;
-        stroke-dasharray: 2,2;
-    }
-    .grid path {
-        display: none;
+        stroke: black;
+        stroke-width: 1px;
     }
     .axis-label {
         font-size: 14px;
         fill: #333;
-    }
-    .legend {
-        font-size: 12px;
     }
     .title {
         font-size: 20px;
         font-weight: bold;
         fill: #333;
     }
-    .tooltip {
-        position: absolute;
-        text-align: center;
-        padding: 5px;
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        pointer-events: none;
+    .grid line {
+        stroke: #e0e0e0;
+        stroke-dasharray: 2, 2;
+    }
+    .grid path {
         display: none;
+    }
+    .legend {
+        font-size: 12px;
     }
 </style>
 <svg width="800" height="500"></svg>
@@ -48,29 +39,28 @@
             d.unemployment_rate = +d.unemployment_rate;
         });
 
-        // Get first third of data
-        const dataSubset = data.slice(0, Math.floor(data.length / 3));
+        // Filter data to include only those aged 23+ and use a tenth of the data
+        const subset = data.filter((_, i) => i % 10 === 0).filter(d => d.age_at_enrollment >= 23);
 
         const svg = d3.select("svg"),
-            margin = { top: 50, right: 100, bottom: 80, left: 60 },
+            margin = { top: 50, right: 150, bottom: 80, left: 60 },
             width = +svg.attr("width") - margin.left - margin.right,
             height = +svg.attr("height") - margin.top - margin.bottom;
 
         const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-        // Color scale for marital status
-        const color = d3.scaleOrdinal()
-            .domain(["single", "married"])
-            .range(["#FF6347", "#4682B4"]); // Red for single, Blue for married
-
         // Scales
         const x = d3.scaleLinear()
-            .domain(d3.extent(data, d => d.age_at_enrollment)) // Full age range
+            .domain(d3.extent(subset, d => d.unemployment_rate))  // Unemployment rate on x-axis
             .range([0, width]);
 
         const y = d3.scaleLinear()
-            .domain(d3.extent(dataSubset, d => d.unemployment_rate)) // Use unemployment range of subset
+            .domain(d3.extent(subset, d => d.age_at_enrollment))  // Age at enrollment on y-axis
             .range([height, 0]);
+
+        const color = d3.scaleOrdinal()
+            .domain(["single", "married"])
+            .range(["magenta", "green"]); // Magenta for single, green for married
 
         // Axes
         g.append("g")
@@ -82,7 +72,7 @@
             .attr("x", width / 2)
             .attr("y", 40)
             .attr("text-anchor", "middle")
-            .text("Age at Enrollment");
+            .text("Unemployment Rate (%)");
 
         g.append("g")
             .call(d3.axisLeft(y).ticks(5))
@@ -93,32 +83,15 @@
             .attr("x", -height / 2)
             .attr("y", -40)
             .attr("text-anchor", "middle")
-            .text("Unemployment Rate (%)");
+            .text("Age at Enrollment");
 
         // Add title
         svg.append("text")
             .attr("class", "title")
-            .attr("x", width / 2)
+            .attr("x", width / 2 + margin.left)
             .attr("y", margin.top / 2)
             .attr("text-anchor", "middle")
-            .text("Unemployment Rate vs. Age at Enrollment (Subset)");
-
-        // Line generator
-        const line = d3.line()
-            .x(d => x(d.age_at_enrollment))
-            .y(d => y(d.unemployment_rate));
-
-        // Use d3.groups() to group by marital status (updated from d3.nest())
-        const maritalStatusGroups = d3.groups(dataSubset, d => d.marital_status);
-
-        maritalStatusGroups.forEach(function(group) {
-            g.append("path")
-                .datum(group[1]) // group[1] contains the actual data points
-                .attr("class", "line")
-                .attr("d", line)
-                .attr("stroke", color(group[0])) // Color by marital status
-                .style("stroke-width", 3);
-        });
+            .text("Unemployment Rate vs. Age at Enrollment (Subset, Ages 23+)");
 
         // Add gridlines
         g.append("g")
@@ -130,57 +103,61 @@
             .attr("transform", `translate(0,${height})`)
             .call(d3.axisBottom(x).tickSize(-height).tickFormat(""));
 
+        // Line generator
+        const line = d3.line()
+            .x(d => x(d.unemployment_rate))
+            .y(d => y(d.age_at_enrollment));
+
+        // Group by marital status and draw lines
+        const groups = d3.groups(subset, d => d.marital_status);
+        groups.forEach(([status, values]) => {
+            g.append("path")
+                .datum(values)
+                .attr("class", "line")
+                .attr("d", line)
+                .attr("stroke", color(status))
+                .attr("stroke-width", 2);
+        });
+
         // Add data points (dots) with color by marital status
         g.selectAll(".dot")
-            .data(dataSubset)
+            .data(subset)
             .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", function(d) { return x(d.age_at_enrollment); })
-            .attr("cy", function(d) { return y(d.unemployment_rate); })
-            .attr("r", 5)
-            .attr("fill", function(d) { return color(d.marital_status); })
-            .style("stroke", "black")
-            .style("stroke-width", "1px")
-            .on("mouseover", function(event, d) {
-                tooltip.style("display", "block")
-                    .html(`Age: ${d.age_at_enrollment}, Rate: ${d.unemployment_rate}%`)
-                    .style("left", (event.pageX + 5) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function() {
-                tooltip.style("display", "none");
-            });
-
-        // Tooltip
-        const tooltip = d3.select("body").append("div").attr("class", "tooltip");
+            .attr("cx", d => x(d.unemployment_rate))
+            .attr("cy", d => y(d.age_at_enrollment))
+            .attr("r", 4)
+            .attr("fill", d => color(d.marital_status));
 
         // Add legend
         const legend = svg.append("g")
-            .attr("transform", `translate(${width - 130}, ${margin.top + 20})`);
+            .attr("transform", `translate(${width + 80}, ${margin.top})`);
 
-        legend.append("rect")
-            .attr("width", 20)
-            .attr("height", 20)
-            .attr("fill", color("single"));
+        // Legend for single
+        legend.append("circle")
+            .attr("cx", 0)
+            .attr("cy", 0)
+            .attr("r", 6)
+            .attr("fill", "magenta");
 
         legend.append("text")
-            .attr("x", 30)
-            .attr("y", 15)
+            .attr("x", 15)
+            .attr("y", 5)
             .attr("class", "legend")
             .text("Single");
 
-        legend.append("rect")
-            .attr("y", 30)
-            .attr("width", 20)
-            .attr("height", 20)
-            .attr("fill", color("married"));
+        // Legend for married
+        legend.append("circle")
+            .attr("cx", 0)
+            .attr("cy", 30)
+            .attr("r", 6)
+            .attr("fill", "green");
 
         legend.append("text")
-            .attr("x", 30)
-            .attr("y", 45)
+            .attr("x", 15)
+            .attr("y", 35)
             .attr("class", "legend")
             .text("Married");
-
     }).catch(function(error) {
         console.error("Error loading the CSV file:", error);
     });
