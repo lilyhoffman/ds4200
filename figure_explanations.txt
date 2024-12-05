@@ -1,46 +1,94 @@
 [NAME OF GRAPH]
-Marks:
-Channels:
-Why we chose this type of visualization: 
-Why did we include the specific color and interactions in the figure:
-Other information about the graph, we want the graders to know:
+    
+    Marks:
 
+    Channels:
 
-[NAME OF GRAPH]
-Marks:
-Channels:
-Why we chose this type of visualization: 
-Why did we include the specific color and interactions in the figure:
-Other information about the graph, we want the graders to know:
+    Why we chose this type of visualization: 
+
+    Why did we include the specific color and interactions in the figure:
+    
+    Other information about the graph, we want the graders to know:
+
 
 
 [NAME OF GRAPH]
-Marks:
-Channels:
-Why we chose this type of visualization: 
-Why did we include the specific color and interactions in the figure:
-Other information about the graph, we want the graders to know:
+    
+    Marks:
 
+    Channels:
 
-[NAME OF GRAPH]
-Marks:
-Channels:
-Why we chose this type of visualization: 
-Why did we include the specific color and interactions in the figure:
-Other information about the graph, we want the graders to know:
+    Why we chose this type of visualization: 
+
+    Why did we include the specific color and interactions in the figure:
+    
+    Other information about the graph, we want the graders to know:
+
 
 
 [NAME OF GRAPH]
-Marks:
-Channels:
-Why we chose this type of visualization: 
-Why did we include the specific color and interactions in the figure:
-Other information about the graph, we want the graders to know:
+    
+    Marks:
+
+    Channels:
+
+    Why we chose this type of visualization: 
+
+    Why did we include the specific color and interactions in the figure:
+
+    Other information about the graph, we want the graders to know:
+
+
+Graph: Confusion Matrix
+
+    Marks: Area
+
+    Channels: Position, Color
+
+    Why we chose this type of visualization: We chose a confusion matrix because it’s the best way to 
+                                         evaluate a classification model’s performance across multiple categories. It lets
+                                          us easily compare actual vs. predicted outcomes and pinpoint where the model struggles. 
+                                          By normalizing the values, we can better interpret relative performance without being 
+                                          affected by class size differences.
+
+    Why did we include the specific color and interactions in the figure: The color gradient ranges from light to dark blue to represent 
+                                                                    prediction accuracy. Darker shades show better predictions, making it 
+                                                                    easy to focus on areas with strong performance (like Graduates). The 
+                                                                    colors are also intuitive and visually distinct, ensuring clarity.
+                                                                    This is a static image, so there are no interactive elements present.
+
+    Other information about the graph, we want the graders to know: This confusion matrix is based on a Random Forest model, which explains 
+                                                                why the performance varies by class. The model does better at predicting 
+                                                                Graduates compared to Enrolled students, likely due to clearer patterns in 
+                                                                the data for Graduates.
+
+
+Graph: Feature Importance
+
+    Marks: Height of the bars (Areas)
+
+    Channels: Position, size (height), color
+
+    Why we chose this type of visualization: A bar chart is ideal for showcasing feature importance because it allows for a clear comparison
+                                             of how much each feature contributes to the model’s decision-making. The sorted order 
+                                             from highest to lowest importance helps focus attention on the most impactful features first.
+
+    Why did we include the specific color and interactions in the figure: The consistent use of blue keeps the graph simple and easy 
+                                                                        to interpret, avoiding any distractions from color variations. 
+                                                                        The choice of dark blue provides good contrast against the background.
+
+    Other information about the graph, we want the graders to know: The top two features, age at enrollment and course, stand out with 
+                                                                    the highest importance scores (0.11 and 0.10), suggesting that these are the 
+                                                                    strongest predictors of student outcomes.
 
 
 [NAME OF GRAPH]
-Marks:
-Channels:
-Why we chose this type of visualization: 
-Why did we include the specific color and interactions in the figure:
-Other information about the graph, we want the graders to know:
+    Marks:
+
+    Channels:
+
+    Why we chose this type of visualization: 
+
+    Why did we include the specific color and interactions in the figure:
+
+    Other information about the graph, we want the graders to know:
