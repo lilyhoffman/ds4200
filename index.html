@@ -76,22 +76,18 @@
         <!-- Paragraph under the graph -->
         <div class="text">
             <p>
-                The interactive scatter plot provides insights into the relationships between age at enrollment, outcomes, and scholarship status, while also allowing for dynamic exploration by marital status. The user may use the slider to manipulate the relationship status of the student to aid in identifying patterns, similarities, or discrepancies in the age at enrollment based on their relationship status. Key takeaways include:
+                The interactive scatter plot provides insights into the relationships between age at enrollment and outcomes, while also allowing for dynamic exploration by marital status. The user may use the slider to manipulate the relationship status of the student to aid in identifying patterns, similarities, or discrepancies in the age at enrollment based on their relationship status. Key takeaways include:
             </p>
             <ul>
                 <li>
                     <strong>Age and Outcomes:</strong> Patterns or clusters in the distribution of outcomes (e.g., dropout, enrolled, graduate) across different age groups can reveal how age at enrollment influences success rates. For instance, younger or older students might be more likely to drop out or graduate.
                 </li>
                 <li>
-                    <strong>Scholarship Impact:</strong> The color distinction for scholarship holders helps identify whether financial support correlates with better outcomes. For example, clusters of scholarship holders near "graduate" outcomes may suggest a positive influence.
-                </li>
-                <li>
-                    <strong>Marital Status as a Contextual Factor:</strong> The animation frame adds marital status as a dimension, allowing you to assess how marital status interacts with age, scholarships, and outcomes. Differences across frames may highlight unique trends, such as married students being more likely to graduate or drop out depending on age.
+                    <strong>Marital Status as a Contextual Factor:</strong> The animation frame adds marital status as a dimension, allowing you to assess how marital status interacts with age and outcomes. Differences across frames may highlight unique trends, such as married students being more likely to graduate or drop out depending on age.
                 </li>
             </ul>
             <p>
-                Some of the interesting takeaways include a slightly higher dropout rate than graduation rate for single students with scholarships. However, when analyzing the data for divorced students we noticed most graduating students received scholarhsips, with a spike in scholarship holding students between the ages of 30 and 40. There also tends to be a similar range of ages for students who graduate and dropout contrary to our hypothesis of older students having a higher graduation rate.
-            </p>
+                Some of the interesting takeways include a higher dropout rate than graduation rate for diverced students. These divorced students who dropped out also have a much wider range of ages in comparison to the other outcomes for divorced students.            </p>
             <p>
                 The range of enrollment age is also much greater for students who are single or married than for any other relationship status.
             </p>
@@ -116,6 +112,7 @@
         </div>
     </div>
     <h4>Model Insights</h4>
+    <p>The model we decided to use was a Random Forest machine learning model. We used a random forest classification model because of its versatility and it excels in handling complex datasets. It works by constructing multiple decision trees during training and combining their outputs for more accurate and stable predictions. This ensemble approach reduces the risk of overfitting and improves generalization to unseen data. Random forests are particularly effective in handling datasets with high dimensionality and are resilient to noise, missing data, and outliers. Additionally, they provide feature importance scores, making them useful for feature selection and understanding the influence of variables on predictions.</p>
     <p>The plots provide meaningful insights into the underlying data based on the model's behavior and feature importance. The feature importance plot reveals which variables in the dataset are most strongly associated with the target outcome, indicating which factors are likely driving the observed patterns in the data. The importance rankings can also expose relationships within the data, such as which attributes contribute more to the variability in the target, helping to identify key predictors. Additionally, the distribution of feature importance, whether it's concentrated on a few features or spread out, tells us whether the data relies heavily on certain predictors or is more evenly distributed.</p>
     <p>In this case, the most influential features are <strong>"age at enrollment"</strong> and <strong>"course"</strong> due to the strong connection they have to predicting the participation in school, and therefore are the highest importance in predicting the students' status of graduated, enrolled, or dropout. However, if we look to the 3rd and 4th most influential features, we can see the influence parential figures in determining the students outcome. This shows that tertiary factors outside of academics can have a substantial role in affecting the outcome of a student. Besides showing which features are the most influential in the random feature model, the feature importance also shows us that there tends to be a shallow decrease in prediction effect on the rest of the statistical data with "age at enrollment" and "course" at 11% and 10% with the other features averaging at ~7% significance.</p>
     <p>From the confusion matrix, the accuracy across different classes can reflect whether the data has imbalanced classes or overlapping features that make some categories harder to distinguish. If certain classes consistently show high misclassification rates, it might suggest noisy or insufficient data in those areas, indicating a need for further data collection or refinement.</p>
