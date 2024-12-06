@@ -32,11 +32,29 @@ Graph: Student Age at Enrollment Vs. Outcome
 
     Channels: Horizontal position for Age, Verticle position for Outcome
 
-    Why we chose this type of visualization: We chose this interactive scatter plot in order to evaluate the relationship between age at enrollment and the outcomes of students. We originally hypothesized that students that enrolled at a later age would be more inclinded to graduated than dropout. However, when analyzing the data throught his visualization we realized that there wasnt a correlation between an increased age at enrollment and graduation rate. We also chose this scatter plot due to the categorical nature of the outcomes (graduate, dropout, enrolled) making age discpreancies easier to read, along with options to add additional interactions such as marital status.
+    Why we chose this type of visualization: We chose this interactive scatter plot in order to evaluate the relationship 
+                                            between age at enrollment and the outcomes of students. We originally hypothesized that
+                                             students that enrolled at a later age would be more inclinded to graduated than dropout.
+                                              However, when analyzing the data throught his visualization we realized that there wasnt 
+                                              a correlation between an increased age at enrollment and graduation rate. We also chose 
+                                              this scatter plot due to the categorical nature of the outcomes (graduate, dropout, enrolled) 
+                                              making age discpreancies easier to read, along with options to add additional interactions 
+                                              such as marital status.
 
-    Why did we include the specific color and interactions in the figure: We decided to use marital status as an interaction to the scatter plot to attempt to identify any trends related to relationship status. Seperating students based on their relationship status of single, married, divorced, etc. could provide us with useful information such as age range, and graduation rates that looks beyond just age at enrollment. Thorugh this we noticed trends and patterns that we explained in our presentation that would have otherwise gone unnoticed without this interaction feature.
+    Why did we include the specific color and interactions in the figure: We decided to use marital status as an interaction to the scatter
+                                                                         plot to attempt to identify any trends related to relationship status. 
+                                                                         Seperating students based on their relationship status of single, married, 
+                                                                         divorced, etc. could provide us with useful information such as age range, 
+                                                                         and graduation rates that looks beyond just age at enrollment. Thorugh this 
+                                                                         we noticed trends and patterns that we explained in our presentation that 
+                                                                         would have otherwise gone unnoticed without this interaction feature.
 
-    Other information about the graph, we want the graders to know: We also added one other interaction to this graph allowing us to view the students scholarship status to help in identifying more trends, however adding 4 variables became too busy and made the graph harder to read so we removed it from the final presentation. The patterns easiest to see were the range of ages and the desity of outcomes associated with the ages, however we must seperate the data by marital status to analyze more in depth and be able to draw sound conclusions.
+    Other information about the graph, we want the graders to know: We also added one other interaction to this graph allowing us to view the students
+                                                                     scholarship status to help in identifying more trends, however adding 4 variables became
+                                                                      too busy and made the graph harder to read so we removed it from the final presentation. 
+                                                                      The patterns easiest to see were the range of ages and the desity of outcomes associated 
+                                                                      with the ages, however we must seperate the data by marital status to analyze more in depth 
+                                                                      and be able to draw sound conclusions.
 
 
 Graph: Confusion Matrix
