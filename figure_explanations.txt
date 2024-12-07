@@ -100,13 +100,13 @@ Graph: Feature Importance
                                                                     strongest predictors of student outcomes.
 
 
-[NAME OF GRAPH]
-    Marks:
+Pathways To Graduation Sankey
+    Marks: Marks as nodes are lines that represent the categories involved (e.g., courses, modes, outcomes). Marks as links represent the connection between nodes and are weighted.
 
-    Channels:
+    Channels: One of the channels used is position - nodes/lines are positioned horizontally to indicate process stages and vertically to reduce overlap. Another channel is width - the width of the links encodes the flow magnitude. Lastly, color is used to distinguish categories.
 
-    Why we chose this type of visualization: 
+    Why we chose this type of visualization: A Sankey diagram is a good tool for showing this data because it visualizes the flows and proportions between categories. For example, it can display student pathways from how they were admitted, through their course choices, to their final outcomes, such as graduating, continuing their studies, or dropping out. The diagram uses different widths to show the magnitude of transitions between categories, helping to identify trends and problems.
 
-    Why did we include the specific color and interactions in the figure:
+    Why did we include the specific color and interactions in the figure: Users can refine the visualization by selecting specific data groups using three sets of checkboxes: Application Modes to choose how students entered the program (e.g., Transfer, International); Courses to select the courses students enrolled in (e.g., Nursing, Tourism); and Outputs to filter by student outcomes (e.g., Graduation, Dropout). These options help users explore details about specific categories. When hovering over nodes or links in the Sankey diagram, tooltips show exact values, like the number of students in a particular transition, which helps users understand specific flows without cluttering the main visualization. Additionally, users can combine selections from different checkbox groups to look at complex interactions, such as examining "International students" who applied for "Nursing" courses and their "Graduation" outcomes.
 
-    Other information about the graph, we want the graders to know:
+    Other information about the graph, we want the graders to know: The checkbox interaction for filtering in the Sankey diagram doesn’t work directly on platforms like GitHub because GitHub doesn’t support interactive panel dashboards. However, the code in your repository can be executed locally to enable these features, providing full interactivity for exploration of the data. This ensures that users can still leverage the dynamic functionality of the dashboard when running the code in a suitable environment.
