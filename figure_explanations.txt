@@ -1,29 +1,42 @@
-[NAME OF GRAPH]
+[Unemployment Rate vs. Age at Enrollment (Line and Scatter Plot)]
     
-    Marks:
+Marks:
+- Line marks representing trends by marital status.
+- Circle marks representing individual data points (scatter plot).
 
-    Channels:
+Channels:
+- X-axis: Unemployment rate (%) to represent economic conditions.
+- Y-axis: Age at enrollment to capture timing of educational decisions.
+- Color: Distinction between marital statuses (magenta for single, green for married).
 
-    Why we chose this type of visualization: 
+Why we chose this type of visualization:
+This combination of a line and scatter plot allows us to visualize both overall trends and individual data points. It effectively shows the relationship between age, unemployment, and marital status, highlighting patterns and clusters that might otherwise be hidden.
 
-    Why did we include the specific color and interactions in the figure:
+Why did we include the specific color and interactions in the figure:
+The color choices provide clear, easily distinguishable categories for marital status. The inclusion of magenta and green ensures contrast and visibility, even for those with color blindness. By segmenting the data into marital statuses, the graph emphasizes differences in unemployment-age relationships.
+
+Other information about the graph, we want the graders to know:
+We filtered the data to include only students aged 23 and above to focus on non-traditional enrollment ages. The gridlines and labels enhance interpretability, while the interaction enables a closer examination of specific trends.
+
+[Number of Students by Marital Status and Outcome (Bar Chart)]
     
-    Other information about the graph, we want the graders to know:
+Marks:
+- Bar marks representing counts of students by marital status and outcome.
 
+Channels:
+- X-axis: Marital status as categorical data.
+- Y-axis: Count of students for quantitative comparison.
+- Color: Outcome categories (e.g., enrolled, graduated, dropped out).
+- Opacity: Dynamic highlighting of selected outcomes via legend interaction.
 
+Why we chose this type of visualization:
+The bar chart format is ideal for comparing distributions across discrete categories like marital status. It highlights disparities in outcomes, such as the high dropout rate among divorced students, while allowing for easy interpretation of proportional differences.
 
-[NAME OF GRAPH]
-    
-    Marks:
+Why did we include the specific color and interactions in the figure:
+Distinct colors for each outcome make comparisons straightforward. The interactive legend allows users to filter and focus on specific outcomes, improving usability and engagement with the data.
 
-    Channels:
-
-    Why we chose this type of visualization: 
-
-    Why did we include the specific color and interactions in the figure:
-    
-    Other information about the graph, we want the graders to know:
-
+Other information about the graph, we want the graders to know:
+This chart provides a snapshot of the relationship between marital status and educational outcomes, highlighting key trends such as the higher dropout rates for divorced students. It complements the scatter plot by contextualizing demographic data with educational results.
 
 
 Graph: Student Age at Enrollment Vs. Outcome
