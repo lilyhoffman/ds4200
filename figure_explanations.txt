@@ -1,4 +1,6 @@
-[Unemployment Rate vs. Age at Enrollment (Line and Scatter Plot)]
+Link: https://lilyhoffman.github.io/ds4200/
+
+Unemployment Rate vs. Age at Enrollment (Line and Scatter Plot)
     
 Marks:
 - Line marks representing trends by marital status.
@@ -18,7 +20,7 @@ The color choices provide clear, easily distinguishable categories for marital s
 Other information about the graph, we want the graders to know:
 We filtered the data to include only students aged 23 and above to focus on non-traditional enrollment ages. The gridlines and labels enhance interpretability, while the interaction enables a closer examination of specific trends.
 
-[Number of Students by Marital Status and Outcome (Bar Chart)]
+Number of Students by Marital Status and Outcome (Bar Chart)
     
 Marks:
 - Bar marks representing counts of students by marital status and outcome.
